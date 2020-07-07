@@ -22,14 +22,12 @@ sierpinski(X1, Y1, X2, Y2, X3, Y3):-
 
 subTriangle(N, XX1, YY1, XX2, YY2, XX3, YY3) :-
   %Draw the 3 sides as black lines
-%write("init"),
     line(integer(XX1), integer(YY1), integer(XX2), integer(YY2)),
     line(integer(XX1), integer(YY1), integer(XX3), integer(YY3)),
     line(integer(XX2), integer(YY2), integer(XX3), integer(YY3)),
 
   %Calls itself 3 times with new corners, but only if the current number of recursions is smaller than the maximum depth
   (N < 8 -> 
-	%write(N),
     subTriangle(
       N + 1,
       (XX1 + XX2) / 2 + (XX2 - XX3) / 2,
