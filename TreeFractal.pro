@@ -1,5 +1,5 @@
 ?-
-window(title("Fraktal"),size(1000,800),backgr(rgb(0,0,0))).
+window(title("Fractal Tree"),size(1000,800),backgr(rgb(0,0,0))).
 
 
 win_func(mouse_click(X,Y)) :-
